@@ -5,3 +5,10 @@ c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.csprojAssem
 c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.csproj.CoreCompileInputs.cache
 c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.exe
 c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.pdb
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\bin\Debug\ClipJack.exe.config
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\bin\Debug\ClipJack.exe
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\bin\Debug\ClipJack.pdb
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\obj\Debug\ClipJack.csprojAssemblyReference.cache
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\obj\Debug\ClipJack.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\obj\Debug\ClipJack.exe
+C:\Users\Gebruiker\source\repos\ClipJack-master\ClipJack\obj\Debug\ClipJack.pdb

