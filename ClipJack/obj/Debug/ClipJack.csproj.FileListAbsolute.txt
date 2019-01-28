@@ -1,0 +1,7 @@
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\bin\Debug\ClipJack.exe.config
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\bin\Debug\ClipJack.exe
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\bin\Debug\ClipJack.pdb
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.csprojAssemblyReference.cache
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.csproj.CoreCompileInputs.cache
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.exe
+c:\users\gebruiker\source\repos\ClipJack\ClipJack\obj\Debug\ClipJack.pdb
